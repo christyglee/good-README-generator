@@ -41,13 +41,13 @@ ${data.tests}
 ## Questions?
 ![Image](Resume_Headshot_300pixels.png)
 <br>
-${data.question1}
+${data.username}
 <br>
 Feel free to reach out to me via GitHub or email. Links provided below. Cheers!
 <br>
-GitHub: [${data.question2}](https://github.com/${data.question2})
+GitHub: [${username}](https://github.com/${username})
 <br>
-Email: [${data.question3}](mailto:${data.question3})
+Email: [${data.email}](mailto:${data.email})
 `;
 }
 

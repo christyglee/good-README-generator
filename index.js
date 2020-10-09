@@ -59,17 +59,12 @@ function userPrompt() {
         },
         {
             type: "input",
-            name: "question1",
-            message: "Include/paste your profile picture here."
-        },
-        {
-            type: "input",
-            name: "question2",
+            name: "username",
             message: "What is your GitHub username?"
         },
         {
             type: "input",
-            name: "question3",
+            name: "email",
             message: "What is your email address?"
         }
     ]);
