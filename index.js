@@ -1,21 +1,22 @@
-// const questions = [
+const questions = [
 
-// ];
+];
 
-// function writeToFile(fileName, data) {
-// }
+function writeToFile(fileName, data) {
+}
 
-// function init() {
+function init() {
 
-// }
+}
 
-// init();
+init();
 
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
+const generateMarkdown = require("./generateMarkdown");
 
-// const writeToFile = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // Create prompt for user input
 function userPrompt() {
@@ -32,12 +33,12 @@ function userPrompt() {
         },
         {
             type: "input",
-            name: "Table of Contents",
-            message: "Create your 'Table of Contents' here."
+            name: "tableOfContents",
+            message: "Create your 'Table of Contents' here. This is optional."
         },
         {
             type: "input",
-            name: "Installation",
+            name: "installation",
             message: "What programs do you need to install for your project?"
         },
         {
@@ -47,8 +48,8 @@ function userPrompt() {
         },
         {
             type: "input",
-            name: "License",
-            message: "Provide any licensing here."
+            name: "license",
+            message: "Provide a type of License used here (if any)."
         },
         {
             type: "input",
@@ -58,16 +59,26 @@ function userPrompt() {
         {
             type: "input",
             name: "tests",
-            message: "How did you test this project?"
+            message: "What did you do to test this project?"
         },
         {
             type: "input",
             name: "questions",
             message: "List any questions you have here."
-        },
-        
-        
-    ])
+        }
+    ]);
 } 
 
-userPrompt();
+userPrompt()
+    .then(function (answers) {
+        const markdown = generateMarkdown(answers);
+        return writeFileAsync("README.md", markdown);
+    })
+    .then(function(){
+        console.log("Successfully wrote into README.md!");
+    })
+    .catch(function(err) {
+        console.log(err);
+    });
+
+
