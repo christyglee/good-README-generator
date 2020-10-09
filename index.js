@@ -17,13 +17,54 @@ const util = require("util");
 
 // const writeToFile = util.promisify(fs.writeFile);
 
+// Create prompt for user input
 function userPrompt() {
     return inquirer.prompt([
         {
             type: "input",
             name: "title",
             message: "What is the title of your project?"
-        }
+        },
+        {
+            type: "input",
+            name: "description",
+            message: "Please describe your project here."
+        },
+        {
+            type: "input",
+            name: "Table of Contents",
+            message: "Create your 'Table of Contents' here."
+        },
+        {
+            type: "input",
+            name: "Installation",
+            message: "What programs do you need to install for your project?"
+        },
+        {
+            type: "input",
+            name: "usage",
+            message: "What is this project used for?"
+        },
+        {
+            type: "input",
+            name: "License",
+            message: "Provide any licensing here."
+        },
+        {
+            type: "input",
+            name: "contributing",
+            message: "List any contributing authors here."
+        },
+        {
+            type: "input",
+            name: "tests",
+            message: "How did you test this project?"
+        },
+        {
+            type: "input",
+            name: "questions",
+            message: "List any questions you have here."
+        },
         
         
     ])
