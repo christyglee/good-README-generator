@@ -58,8 +58,18 @@ function userPrompt() {
         },
         {
             type: "input",
-            name: "questions",
-            message: "List any questions you have here."
+            name: "question1",
+            message: "Include/paste your profile picture here."
+        },
+        {
+            type: "input",
+            name: "question2",
+            message: "What is your GitHub username?"
+        },
+        {
+            type: "input",
+            name: "question3",
+            message: "What is your email address?"
         }
     ]);
 } 
