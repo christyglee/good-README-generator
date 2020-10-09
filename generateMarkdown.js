@@ -41,9 +41,9 @@ ${data.tests}
 ## Questions?
 ${data.question1}
 <br>
-**GitHub Username: ${data.question2}**
+GitHub: [${data.question2}](https://github.com/${data.question2})
 <br>
-**Email: ${data.question3}**
+Email: [${data.question3}](mailto:${data.question3})
 `;
 }
 
