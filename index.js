@@ -33,11 +33,6 @@ function userPrompt() {
         },
         {
             type: "input",
-            name: "tableOfContents",
-            message: "Create your 'Table of Contents' here. This is optional."
-        },
-        {
-            type: "input",
             name: "installation",
             message: "What programs do you need to install for your project?"
         },
