@@ -39,7 +39,11 @@ ${data.contributing}
 ${data.tests}
 <br>
 ## Questions?
+![Image](Resume_Headshot_300pixels.png)
+<br>
 ${data.question1}
+<br>
+Feel free to reach out to me via GitHub or email. Links provided below. Cheers!
 <br>
 GitHub: [${data.question2}](https://github.com/${data.question2})
 <br>
