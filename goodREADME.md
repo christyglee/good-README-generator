@@ -1,11 +1,10 @@
-function generateMarkdown(data) {
-  return `
-# ${data.title}
+
+# hello
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-ff69b4.svg)
 
 ## Description
-${data.description}
+my
 <br>
 ## Table of Contents
 * [Installation](#installation)
@@ -24,29 +23,25 @@ ${data.description}
 <br>
 
 ## Installation
-${data.installation}
+name
 <br>
 ## Usage
-${data.usage}
+is
 <br>
 ## License
-${data.license}
+christy
 <br>
 ## Contributing Authors
-${data.contributing}
+lee
 <br>
 ## Tests
-${data.tests}
+alsdkj
 <br>
 ## Questions?
-![Image](https://github.com/${data.username}.png?size=300)
+![Image](https://github.com/christyglee.png?size=300)
 <br>
 Feel free to reach out to me via GitHub or email. Links provided below. Cheers!
 <br>
-GitHub: [${data.username}](https://github.com/${data.username})
+GitHub: [christyglee](https://github.com/christyglee)
 <br>
-Email: [${data.email}](mailto:${data.email})
-`;
-}
-
-module.exports = generateMarkdown;
+Email: [christy.g.lee@gmail.com](mailto:christy.g.lee@gmail.com)

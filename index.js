@@ -73,8 +73,21 @@ function userPrompt() {
 userPrompt()
     .then(function (answers) {
         const markdown = generateMarkdown(answers);
-        return writeFileAsync("README.md", markdown);
+        return writeFileAsync("goodREADME.md", markdown);
     })
+
+    // axios call to GitHub API
+    // .then(function({ username }) {
+    //     const queryUrl = `https://api.github.com/users/${username}`;
+
+    //     axios
+    //     .get(queryUrl)
+    //     .then(function(whatever){
+    //         console.log(whatever.data.avatar_url)
+    //     })
+    // }
+
+
     .then(function(){
         console.log("Successfully wrote into README.md!");
     })
