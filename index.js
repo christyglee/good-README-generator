@@ -43,9 +43,10 @@ function userPrompt() {
             message: "What is this project used for?"
         },
         {
-            type: "input",
+            type: "list",
             name: "license",
-            message: "Provide a type of License used here (if any)."
+            message: "Provide a type of License used here (if any).",
+            choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3"]
         },
         {
             type: "input",
@@ -68,31 +69,31 @@ function userPrompt() {
             message: "What is your email address?"
         }
     ]);
-} 
+}
 
 userPrompt()
-    .then(function (answers) {
-        const markdown = generateMarkdown(answers);
-        return writeFileAsync("goodREADME.md", markdown);
-    })
-
     // axios call to GitHub API
-    // .then(function({ username }) {
-    //     const queryUrl = `https://api.github.com/users/${username}`;
+    .then(function (answers) {
+        const queryUrl = `https://api.github.com/users/${answers.username}`;
 
-    //     axios
-    //     .get(queryUrl)
-    //     .then(function(whatever){
-    //         console.log(whatever.data.avatar_url)
-    //     })
-    // }
+        axios
+            .get(queryUrl)
+            .then(function (response) {
+                // console.log(response)
+                // console.log(response.data.avatar_url)
+                answers.avatar = response.data.avatar_url;
+                const markdown = generateMarkdown(answers);
+                
+                return writeFileAsync("goodREADME.md", markdown);
+            })  
+            .then(function () {
+                console.log("Successfully wrote into README.md!");
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
 
-
-    .then(function(){
-        console.log("Successfully wrote into README.md!");
-    })
-    .catch(function(err) {
-        console.log(err);
     });
+
 
 
