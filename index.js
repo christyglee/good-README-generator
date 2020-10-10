@@ -45,7 +45,7 @@ function userPrompt() {
         {
             type: "list",
             name: "license",
-            message: "Choose one of the following license",
+            message: "Choose one of the following licenses used in your project",
             choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3"]
         },
         {
