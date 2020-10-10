@@ -18,7 +18,7 @@ Finally, I found a way by creating an axios call to retreive data information fr
 
 <br>
 
-To view the demo of this application, please navigate to the **Demo Link** below or  [click here](https://christyglee.github.io/weather-dashboard/) to view.
+To view the demo of this application, please navigate to the **Demo Link** below or  [click here](https://drive.google.com/file/d/1ZUi_FjFtooDOfInEGDim1jUedjpa8o1w/view) to view.
 
 <br>
 
@@ -47,7 +47,9 @@ To view the demo of this application, please navigate to the **Demo Link** below
 
 ## Demo Link
 
-* [See Demo Link](https://christyglee.github.io/weather-dashboard/)
+[![Watch the video](goodREADME-2.PNG)](https://drive.google.com/file/d/1ZUi_FjFtooDOfInEGDim1jUedjpa8o1w/view)
+
+* [See Demo Link](https://drive.google.com/file/d/1ZUi_FjFtooDOfInEGDim1jUedjpa8o1w/view)
 
 <br>
 
