@@ -72,10 +72,10 @@ function userPrompt() {
 }
 
 userPrompt()
-    // axios call to GitHub API
+
     .then(function (answers) {
         const queryUrl = `https://api.github.com/users/${answers.username}`;
-
+        // axios call to GitHub API
         axios
             .get(queryUrl)
             .then(function (response) {
